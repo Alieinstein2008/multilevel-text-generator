@@ -1,0 +1,22 @@
+# Configurações locais
+.vscode/
+
+# Frontend
+**/node_modules/
+**/.next/
+**/out/
+**/coverage/
+
+# Backend Python
+**/__pycache__/
+*.py[cod]
+**/.pytest_cache/
+multilevel-text-generator-app/backend/.env/
+
+# Dataset local
+multilevel-text-generator-app/backend/app/dataset_caed/
+
+# Variaveis de Ambiente
+.env
+.env.*
+!.env.example
