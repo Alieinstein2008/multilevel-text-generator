@@ -1,83 +1,152 @@
-<div align="center">
-  <img src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js" />
-  <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="React" />
-  <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
-  <br />
-  <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python" />
-  <img src="https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi" alt="FastAPI" />
-  <img src="https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="scikit-learn" />
-  <img src="https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy" />
-  <img src="https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas" />
-</div>
-<br />
-
 # Multilevel Text Generator
 
-A aplicação **Multilevel Text Generator** é um sistema avançado desenvolvido para auxiliar na automação e análise da criação de textos focados em testes de capacidade de leitura. O projeto permite gerar versões mutadas de uma narrativa curta e analisar, em tempo real, como essas alterações e heurísticas impactam a complexidade prevista do texto.
+O **Multilevel Text Generator** é uma aplicação desenvolvida para auxiliar na transformação e na análise da complexidade linguística de textos educacionais. O sistema combina operações heurísticas de mutação textual, processamento de linguagem natural (NLP) e aprendizado de máquina para estimar o nível de ensino associado a um texto.
 
-## 💻 Telas da Aplicação
+<p align="center">
+  <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white" alt="Next.js" />
+  <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI" />
+  <img src="https://img.shields.io/badge/spaCy-09A3D5?style=flat-square&logo=spacy&logoColor=white" alt="spaCy" />
+  <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white" alt="scikit-learn" />
+  <img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white" alt="NumPy" />
+  <img src="https://img.shields.io/badge/pandas-150458?style=flat-square&logo=pandas&logoColor=white" alt="pandas" />
+</p>
 
-*(As imagens demonstram a interface responsiva desenvolvida para a comparação de textos e exibição dos indicadores de complexidade linguística).*
+## Demonstração da aplicação
 
-![Interface 1](multilevel-text-generator-app/assets/Interface0003.png)
+A interface responsiva permite transformar textos, consultar estatísticas linguísticas e comparar os níveis de complexidade previstos para o conteúdo original e suas versões modificadas.
 
-![Interface 2](multilevel-text-generator-app/assets/Interface0002.png)
+<p align="center">
+  <img src="multilevel-text-generator-app/assets/Interface0003.png" alt="Interface do Multilevel Text Generator — visão geral" width="32%" />
+  <img src="multilevel-text-generator-app/assets/Interface0002.png" alt="Interface do Multilevel Text Generator — análise textual" width="32%" />
+  <img src="multilevel-text-generator-app/assets/Interface0001.png" alt="Interface do Multilevel Text Generator — comparação de resultados" width="32%" />
+</p>
 
-![Interface 3](multilevel-text-generator-app/assets/Interface0001.png)
+## Funcionalidades
 
-## 🚀 Funcionalidades
+### Transformação textual
 
-O fluxo central da aplicação permite o processamento de ponta a ponta:
-*   **Entrada de Texto**: Permite ao usuário inserir um texto original para ser analisado e transformado. O sistema exibe um aviso contextual caso o texto inserido possua menos de 100 palavras para garantir a precisão da análise.
-*   **Transformação Textual**: Geração de uma versão modificada do texto com base na seleção de operações heurísticas avançadas de mutação.
-*   **Classificação de Complexidade**: Avaliação do texto original e do texto gerado, classificando-os em quatro níveis de ensino: Ensino Fundamental I (EF1), Ensino Fundamental II (EF2), Ensino Médio (EM) e Ensino Superior (ES).
-*   **Dashboard Comparativo**: Apresenta a classe prevista e as probabilidades do modelo de Machine Learning por classe. Exibe estatísticas descritivas para o texto, como número de palavras, número de sentenças, comprimento médio das palavras, diversidade lexical e a porcentagem de palavras que atendem à heurística de canonicidade.
+- **Substituição de palavras:** substitui palavras selecionadas por sinônimos ou antônimos de uma base lexical estruturada, utilizando similaridade vetorial e restrições gramaticais para orientar a escolha dos candidatos.
+- **Transformação de gênero:** altera substantivos e adjetivos masculinos e femininos mapeados e utiliza informações de dependência sintática para ajustar artigos e adjetivos relacionados.
+- **Paráfrase:** a opção está presente na interface, mas a operação ainda não foi implementada. Sua implementação está planejada para uma versão futura. Atualmente, a API retorna HTTP 422 quando essa operação é solicitada.
 
-## 🛠 Arquitetura e Stack Tecnológico
+### Análise da complexidade linguística
 
-A solução foi estruturada com uma arquitetura moderna, separando as responsabilidades de interface (client-side) e processamento analítico (server-side).
+A aplicação classifica os textos em quatro níveis de ensino:
 
-*   **Frontend**: Construído com Next.js, React, TypeScript, Tailwind CSS e Lucide React. O frontend gerencia a entrada de texto, a seleção de operações, e apresenta o dashboard interativo de resultados.
-*   **Backend / API**: Desenvolvido em Python com FastAPI e Pydantic para validação robusta das requisições e orquestração do pipeline de processamento assíncrono.
-*   **NLP e Machine Learning**: spaCy (modelo `pt_core_news_lg`), scikit-learn, NumPy, pandas e joblib. Responsáveis pela análise linguística profunda, extração de features textuais, treinamento e inferência do modelo de classificação.
-*   **Dados Lexicais**: Dicionário estruturado de sinônimos e antônimos convertido para o formato JSON, originado a partir do recurso TeP 2.0 (via `stavarengo/portuguese-brazilian-synonyms`).
+| Sigla | Nível de ensino |
+|---|---|
+| EF1 | Ensino Fundamental I |
+| EF2 | Ensino Fundamental II |
+| EM | Ensino Médio |
+| ES | Ensino Superior |
 
-## 🧠 Classificador de Complexidade
+O painel de análise apresenta a classe prevista, as probabilidades associadas a cada classe e estatísticas descritivas do texto:
 
-O classificador foi treinado sobre um dataset rigoroso de 2.076 arquivos de texto extraídos de materiais didáticos do MEC. O treinamento utilizou um particionamento estratificado de 80% para treino e 20% para validação e teste.
+- Quantidade de palavras e sentenças.
+- Comprimento médio das palavras.
+- Diversidade lexical.
+- Proporção de palavras que atendem à heurística de canonicidade.
 
-*   **Modelo**: `HistGradientBoostingClassifier` da biblioteca scikit-learn, configurado e otimizado com `max_iter=400`, `max_depth=6`, `learning_rate=0.05` e `max_leaf_nodes=31`.
-*   **Representação Textual**: Utiliza um vocabulário TF-IDF (unigramas e bigramas, limitados a 5.000 features) reduzido dimensionalmente por `TruncatedSVD` com 100 componentes principais.
-*   **Features Linguísticas**: O modelo incorpora um vetor com 31 características linguísticas adicionais elaboradas via spaCy. Essas características englobam propriedades estruturais, riqueza lexical, proporção de classes gramaticais, relações sintáticas e marcas morfológicas complexas.
-*   **Feature de Canonicidade**: Implementação heurística personalizada que verifica pares de caracteres seguindo o padrão consoante-vogal (CV), atribuindo um escore por token. O modelo de predição consome a média, a dispersão e a proporção de palavras com escore perfeito.
+Quando o texto inserido contém menos de 100 palavras, a interface apresenta um aviso contextual ao usuário.
 
-### 📊 Resultados no Conjunto de Teste
+## Arquitetura e tecnologias
 
-No conjunto de teste isolado (416 documentos), o modelo apresentou métricas de alta performance:
-*   **Acurácia**: 91,35%
-*   **F1 Macro**: 90,24%
+A aplicação separa a interface de usuário do processamento textual e do pipeline de aprendizado de máquina.
 
-O nível Ensino Superior (ES) apresentou o maior F1-score (0,94), enquanto o Ensino Fundamental II (EF2) alcançou 0,87. A matriz de confusão aponta que os principais desvios ocorrem apenas entre classes limítrofes, com destaque para a leve sobreposição natural entre textos de transição do EF1 para o EF2.
+| Camada | Tecnologias | Responsabilidades |
+|---|---|---|
+| Frontend | Next.js, React, TypeScript, Tailwind CSS e Lucide React | Entrada de texto, seleção das operações, interface responsiva e visualização comparativa dos resultados |
+| Backend e API | Python, FastAPI e Pydantic | Validação das requisições e coordenação do processamento textual |
+| Processamento de linguagem natural | spaCy (`pt_core_news_lg`) | Análise linguística, embeddings e ajustes gramaticais baseados em dependências sintáticas |
+| Aprendizado de máquina | scikit-learn, NumPy, pandas e joblib | Processamento de características, classificação e serialização do modelo |
+| Recursos lexicais | JSON e recurso derivado do TeP 2.0 | Consulta a candidatos a sinônimos e antônimos para substituição de palavras |
 
-## 🧬 Operadores de Mutação
+A base lexical tem origem em um recurso derivado do TeP 2.0, disponibilizado por meio do projeto `stavarengo/portuguese-brazilian-synonyms`.
 
-A aplicação integra heurísticas textuais inteligentes para alterar as frases de entrada, mantendo a coerência semântica sempre que possível. O endpoint de geração devolve o texto processado e a trilha de auditoria das operações aplicadas.
+## Modelo de classificação da complexidade
 
-1.  **Troca de Palavras**: Substitui aleatoriamente até cinco palavras-chave do texto por seus sinônimos ou antônimos consultando a base lexical JSON. A heurística prioriza candidatos baseando-se na similaridade vetorial de word embeddings (spaCy) e aplica lógicas de flexão gramatical (gênero e número), limitando de forma inteligente a substituição de verbos conjugados.
-2.  **Troca de Gênero**: Altera o sujeito das frases utilizando pares mapeados de substantivos e adjetivos masculinos/femininos. Após a alteração central, o operador percorre as árvores de dependência sintática do spaCy para reajustar automaticamente a concordância de artigos e adjetivos conectados.
-3.  **Paráfrase (Em desenvolvimento)**: O controle visual existe na interface para demonstrar a escalabilidade do sistema. O desenvolvimento deste operador está planejado para o próximo ciclo de releases. A API lança um erro HTTP 422 adequado caso essa operação seja requerida precocemente.
+O classificador foi treinado com um conjunto de **2.076 documentos textuais extraídos de materiais didáticos do Ministério da Educação (MEC)**.
 
-## ⚙️ Instalação e Execução
+### Configuração do modelo
 
-### Artefatos Necessários
-*   O arquivo do modelo serializado `modelo_complexidade.joblib` deve estar alocado no diretório `backend/app/ml/models/`.
-*   O arquivo de base lexical `output.json` precisa estar acessível na raiz do projeto backend.
+O modelo utiliza o `HistGradientBoostingClassifier`, da biblioteca scikit-learn, com os seguintes parâmetros:
 
-### Execução do Backend (API)
-Utilizando um terminal na raiz do backend, crie seu ambiente virtual (recomendado) e execute os comandos:
+| Parâmetro | Valor |
+|---|---:|
+| `max_iter` | 400 |
+| `max_depth` | 6 |
+| `learning_rate` | 0.05 |
+| `max_leaf_nodes` | 31 |
+
+O pipeline de representação textual e engenharia de características combina:
+
+- **TF-IDF:** representação de unigramas e bigramas, limitada a 5.000 características.
+- **Redução de dimensionalidade:** `TruncatedSVD` com 100 componentes.
+- **Características linguísticas:** vetor com 31 características adicionais extraídas por meio do spaCy, abrangendo estrutura textual, riqueza lexical, distribuição de classes gramaticais, relações sintáticas e características morfológicas.
+- **Canonicidade:** heurística personalizada que avalia padrões de caracteres consoante-vogal (CV) nos tokens. O modelo utiliza a média dos escores, sua dispersão e a proporção de palavras com pontuação perfeita.
+
+A avaliação utiliza particionamento estratificado de 80% para treinamento e 20% para validação e teste. Os resultados abaixo correspondem ao conjunto de teste isolado, composto por 416 documentos.
+
+### Resultados da avaliação
+
+| Métrica | Resultado |
+|---|---:|
+| Acurácia no teste | **91,35%** |
+| F1-score macro | **90,24%** |
+| F1-score — Ensino Superior (ES) | 0,94 |
+| F1-score — Ensino Fundamental II (EF2) | 0,87 |
+
+A matriz de confusão relatada indica que os principais erros de classificação ocorrem entre níveis de ensino adjacentes, incluindo a sobreposição entre textos próximos à transição do EF1 para o EF2.
+
+Esses resultados correspondem ao conjunto de dados e às condições de avaliação utilizados no projeto. Eles não representam uma garantia de desempenho equivalente para qualquer texto.
+
+## Operadores de mutação textual
+
+O endpoint de geração retorna o texto processado e uma trilha de auditoria das operações aplicadas.
+
+### 1. Substituição de palavras
+
+Substitui até cinco palavras selecionadas por sinônimos ou antônimos consultados em uma base lexical JSON.
+
+A seleção de candidatos utiliza similaridade vetorial com recursos do spaCy e restrições gramaticais. O operador considera flexões de gênero e número e limita substituições envolvendo verbos conjugados.
+
+### 2. Transformação de gênero
+
+Transforma substantivos e adjetivos masculinos e femininos presentes nos mapeamentos disponíveis. Após a alteração principal, o operador percorre as árvores de dependência sintática do spaCy para ajustar a concordância dos artigos e adjetivos relacionados.
+
+### 3. Paráfrase
+
+A operação de paráfrase está planejada para uma versão futura. Embora a opção esteja disponível na interface, sua implementação ainda não foi concluída. Atualmente, a API retorna HTTP 422 quando a operação é solicitada.
+
+## Instalação e execução
+
+### Pré-requisitos
+
+O backend depende dos seguintes artefatos:
+
+- Modelo de classificação serializado: `modelo_complexidade.joblib`, localizado em `backend/app/ml/models/`.
+- Base lexical: `output.json`, acessível a partir do diretório do backend.
+- Modelo de português do spaCy: `pt_core_news_lg`.
+
+Antes de iniciar a aplicação, verifique se os artefatos necessários estão disponíveis nos caminhos esperados.
+
+### Executando o backend
+
+A partir da raiz do repositório, instale as dependências e inicie o servidor de desenvolvimento:
+
 ```bash
 cd multilevel-text-generator-app/backend
+
 python -m pip install -r requirements.txt
+
 python -m spacy download pt_core_news_lg
+
 python -m uvicorn app.main:app --reload
+```
+
+A opção `--reload` habilita a reinicialização automática do servidor durante o desenvolvimento.
+
